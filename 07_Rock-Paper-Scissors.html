@@ -5,48 +5,56 @@
 </head>
 <body>
   <button onclick = " 
-    const computerMove = pickComputerMove();
-
-    let result = '';
-    if(computerMove === 'Rock'){
-      result = 'Tie';
-    }else if(computerMove === 'Paper'){
-      result = 'You Lose';
-    }else{
-      result = 'You win';
-    }
-    alert(`You picked Rock.Computer picked ${computerMove}.${result}.`)
+  playGame('Rock');
   ">Rock</button>
 
   <button onclick = "
-    const computerMove = pickComputerMove()
+    playGame('Paper');
+  ">Paper</button>
+
+  <button onclick ="
+    playGame('Scissors');
+  ">Scissors</button>
+
+  <script>
+    function playGame(playerMove){
+
+    const computerMove = pickComputerMove();
 
     let result = '';
-    if(computerMove === 'Rock'){
+
+    if(playerMove=== 'Rock'){
+      if(computerMove === 'Rock'){
+        result = 'Tie';
+      }else if(computerMove === 'Paper'){
+        result = 'You Lose';
+      }else{
+        result = 'You win';
+      }
+    }
+    
+    else if(playerMove === 'Paper'){
+      if(computerMove === 'Rock'){
       result = 'You win';
     }else if(computerMove === 'Paper'){
       result = 'Tie';
     }else{
       result = 'You Lose';
     }
-    alert(`You picked Paper.Computer picked ${computerMove}.${result}.`)
-  ">Paper</button>
-
-  <button onclick ="
-    const computerMove = pickComputerMove()
-
-    let result = '';
-    if(computerMove === 'Rock'){
+    }
+    
+    else if(playerMove === 'Scissors'){
+      if(computerMove === 'Rock'){
       result = 'You Lose';
     }else if(computerMove === 'Paper'){
       result = 'You Win';
     }else{
       result = 'Tie';
     }
-    alert(`You picked Scissors.Computer picked ${computerMove}.${result}.`)
-  ">Scissors</button>
-
-  <script>
+    }
+  
+    alert(`You picked ${playerMove}.Computer picked ${computerMove}.${result}.`)
+  }
     /*
     let computerMove = '';
     function pickComputerMove(){
