@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Objects</title>
+</head>
+<body>
+  <script>
+    /*
+    const person = {
+      firstName: 'Ankit',
+      lastName: 'Patel',
+      age: 21
+    };
+
+    console.log(typeof person);
+    //accesing 
+    console.log(person);
+    console.log(person.firstName);
+    console.log(person.lastName);
+
+    //modifying
+    person.firstName = 'Aman';
+    console.log(person.firstName);
+
+    //adding an element
+    person.education ='B.Tech';
+    console.log(person);
+    console.log(person.education);
+
+    //removing an element
+    delete person.education;
+    console.log(person);
+    */
+
+    /*
+    const product = {
+      name: 'tshirt',
+      ['delievery-time']: '1 day',
+      rating: {
+        stars: 4.5,
+        reviews: 98
+      },
+      fun: function func1(){
+        console.log('Function inside object');
+      }
+
+    };
+    console.log(product);
+    console.log(product.name);
+    console.log(product['name']);
+
+    // console.log(product.delievery-time);//takes hypen as a minus sign and operates accordingly
+    console.log(product['delievery-time']);
+
+    console.log(product.rating.stars);
+    // console.log(product.rating[reviews]);//not proving output
+
+    //below both are same
+    product.fun();
+    console.log(product.fun());
+
+    console.log(typeof JSON);
+    //JS to JSON
+    console.log(JSON.stringify(product));
+
+    //JSON to JS
+    const jsonString  = JSON.stringify(product);
+    console.log(JSON.parse(jsonString));
+    */
+
+    console.log('hello'.length);
+    console.log('hello'.toUpperCase());
+
+    const object1 = {
+      message: 'hello',
+      price: 799
+    };
+    const object2 = object1;
+
+    object1.message = 'Good job!';
+    console.log(object1);
+    console.log(object2);
+
+    const object3 = {
+      message: 'Good job!',
+      price: 799
+    };
+    console.log(object1 === object3);//compares references not the content
+
+    //destructuring
+    // const message = object1.message;
+    const { message, price: cost } = object1;
+    console.log(message);
+    console.log(cost);
+
+    //shorthand
+    const object4 = {
+      // message: message,
+      message,
+      // method: function function1() {
+
+      // },
+      // method: function() {
+
+      // },
+      method() {
+
+      }
+    };
+    
+
+  </script>
+</body>
+</html>
+
+
+<!--
+Built-in java objects
+1.console.log :console is object whereas console.log is function or method.
+2.JSON(JavaScript Object Notation) : It is an object. It is a similar kind of syntax as JS with lesser features.It is more universally accepted among programming languages.
+3.LocalStorage :It is used to store values so that we do not lose them .It only supports strings.
+-->
